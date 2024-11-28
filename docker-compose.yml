@@ -9,14 +9,23 @@ services:
       MYSQL_USER: cines
       MYSQL_PASSWORD: i20213tn001
   
-  frontend:
+  cinepolis:
     build:
-      context: ./examenU2 
+      context: ./examenU2/cinepolis
       dockerfile: Dockerfile
     ports:
-      - "3000:80" 
+      - "8001:80" 
     networks:
       - app-network
+      
+  cinemex:
+    build:
+      context: ./examenU2/cinemex
+      dockerfile: Dockerfile
+    ports:
+      - "8002:80" 
+    networks:
+      - app-network    
 
 networks:
   app-network:
