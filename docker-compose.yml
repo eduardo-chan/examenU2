@@ -11,7 +11,7 @@ services:
   
   cinepolis:
     build:
-      context: ./examenU2/cinepolis
+      context: ./cinepolis
       dockerfile: Dockerfile
     ports:
       - "8001:80" 
@@ -20,7 +20,7 @@ services:
       
   cinemex:
     build:
-      context: ./examenU2/cinemex
+      context: ./cinemex
       dockerfile: Dockerfile
     ports:
       - "8002:80" 
